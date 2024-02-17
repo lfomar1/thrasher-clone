@@ -1,40 +1,16 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Button from "./components/UI/Button";
 import tShirtBlack from "./assets/tShirtBlack.webp";
 import skatePoster from "./assets/skatePoster.webp";
 import hoodie from "./assets/hoodie.webp";
 
 const Home = () => {
-  const Button = (props: { btnName: string }) => {
-    return (
-      <button
-        className={"bg-white rounded-full py-3 px-6 font-semibold text-sm"}
-        type="button"
-      >
-        {props.btnName}
-      </button>
-    );
-  };
   return (
     <>
       <Navbar />
       <section className="hero-1">
-        <div className="w-full relative mb-4">
-          <Image
-            src="https://shop.thrashermagazine.com/cdn/shop/files/HOMEPAGE-HEADER-1670_X_700-DT_6b774441-95c3-46d2-8364-7bdb3aab8384.jpg"
-            alt="banner"
-            width={0}
-            height={0}
-            layout="responsive"
-            style={{ width: "100%" }}
-          />
-          <div className="absolute top-0 text-white w-full h-full flex justify-center items-center flex-col gap-3 tracking-widest">
-            <p className="text-6xl font-extrabold">FREE SHIPPING</p>
-            <p className="text-2xl">
-              ON ALL DOMESTIC ORDERS WITH PURCHASE OF A HOODIE & T-SHIRT
-            </p>
-          </div>
-        </div>
         <div className="relative">
           <div>
             <Image
@@ -52,7 +28,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="hero-2">
+      <section className="hero-2 mb-20">
         <div className="flex py-5 gap-5 w-full">
           <div className="relative max-w-xl">
             <Image
@@ -114,16 +90,44 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full py-5">
+          <div className="relative">
+            <Image
+              src="https://shop.thrashermagazine.com/cdn/shop/files/666-HOMEPAGE-BLOCK-1670_X_500-DT_7c2c2e8b-b05c-435d-bda1-ef32a6189966.jpg?v=1684449344&width=1400"
+              alt="banner"
+              width={0}
+              height={0}
+              layout="responsive"
+              style={{ maxWidth: "100%" }}
+            />
+
+            <div className="absolute bottom-0 p-5">
+              <p className="text-3xl font-bold text-white">66 6th St.</p>
+              <p className="text-3xl font-bold text-white">San Francisco, CA</p>
+              <p className="text-white">
+                A premium collection of limited pieces,
+              </p>
+              <p className="text-white mb-2">
+                sold exclusively online & at our San Francisco flagship store.
+              </p>
+              <Button btnName="Shop Collection"></Button>
+            </div>
+          </div>
+        </div>
+        <div className="w-full relative">
           <Image
-            src="https://shop.thrashermagazine.com/cdn/shop/files/666-HOMEPAGE-BLOCK-1670_X_500-DT_7c2c2e8b-b05c-435d-bda1-ef32a6189966.jpg?v=1684449344&width=1400"
+            src="https://shop.thrashermagazine.com/cdn/shop/files/HOMEPAGE-BLOCK-1670_X_500-DT_c7afcf07-2e6f-4be9-8929-d6b9380e4924.jpg?v=1694735257&width=1400"
             alt="banner"
             width={0}
             height={0}
             layout="responsive"
             style={{ maxWidth: "100%" }}
           />
+          <div className="absolute bottom-0 p-4">
+            <Button btnName="Subscribe to the mag"></Button>
+          </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
