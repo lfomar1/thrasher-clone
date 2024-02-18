@@ -1,22 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Search, User, ShoppingBag } from "lucide-react";
 import { navbarCategories, Category } from "./navbarCategories";
 const Navbar = () => {
   return (
     <>
       <div className="flex justify-between items-center p-5">
-        <Image
-          src="https://cdn.shopify.com/s/files/1/0732/6056/4797/files/THRASHER_MAGAZINE_-_LOGO_KEY-LOGO-BLACK.svg?v=1679007096"
-          alt="logo"
-          layout="instrinsic"
-          width={0}
-          height={0}
-          style={{ width: "185px", height: "auto" }}
-        />
+        <Link href="/">
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0732/6056/4797/files/THRASHER_MAGAZINE_-_LOGO_KEY-LOGO-BLACK.svg?v=1679007096"
+            alt="logo"
+            layout="instrinsic"
+            width={0}
+            height={0}
+            style={{ width: "185px", height: "auto" }}
+          />
+        </Link>
         <div className="flex space-x-16 text-sm font-semibold">
           {navbarCategories.map((category: Category) => (
             <div key={category.title}>
-              <h1>{category.title}</h1>
+              <Link href={category.href}>{category.title}</Link>
             </div>
           ))}
         </div>

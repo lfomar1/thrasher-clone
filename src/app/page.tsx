@@ -23,7 +23,7 @@ const Home = () => {
             />
             <div className="absolute bottom-0 p-8">
               <p className="text-white text-4xl font-bold my-2">NEW ARRIVALS</p>
-              <Button btnName="Shop Collection"></Button>
+              <Button btnName="Shop Collection" lightMode={true}></Button>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ const Home = () => {
               style={{ maxWidth: "100%", height: "100%" }}
             />
             <div className="absolute bottom-0 p-4">
-              <Button btnName="Classics"></Button>
+              <Button btnName="Classics" lightMode={true}></Button>
             </div>
           </div>
           <div className="relative">
@@ -57,7 +57,7 @@ const Home = () => {
               style={{ maxWidth: "100%", height: "100%" }}
             />
             <div className="absolute bottom-0 p-4">
-              <Button btnName="Hoodies"></Button>
+              <Button btnName="Hoodies" lightMode={true}></Button>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
               style={{ width: "100%" }}
             />
             <div className="absolute bottom-0 p-4">
-              <Button btnName="T-shirts"></Button>
+              <Button btnName="T-shirts" lightMode={true}></Button>
             </div>
           </div>
           <div className="relative w-full">
@@ -85,7 +85,7 @@ const Home = () => {
               style={{ maxWidth: "100%" }}
             />
             <div className="absolute bottom-0 p-4">
-              <Button btnName="Headwear"></Button>
+              <Button btnName="Headwear" lightMode={true}></Button>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ const Home = () => {
               <p className="text-white mb-2">
                 sold exclusively online & at our San Francisco flagship store.
               </p>
-              <Button btnName="Shop Collection"></Button>
+              <Button btnName="Shop Collection" lightMode={true}></Button>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ const Home = () => {
             style={{ maxWidth: "100%" }}
           />
           <div className="absolute bottom-0 p-4">
-            <Button btnName="Subscribe to the mag"></Button>
+            <Button btnName="Subscribe to the mag" lightMode={true}></Button>
           </div>
         </div>
       </section>
