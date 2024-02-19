@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="hero-2 mb-20">
+      <section className="hero-2">
         <div className="flex py-5 gap-5 w-full">
           <div className="relative max-w-xl">
             <Image
