@@ -74,7 +74,62 @@ def return_home():
             'price': '71.87$',
             'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/COPCARMAROON-HOODIE-1.jpg',
         }
-        ]
+        ],
+        'accesories': [{
+            'id': '1',
+            'name': 'Thrasher X Herschel',
+            'type': 'Backpack',
+            'price': '71.87$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/THRASHERXHERSCHEL-BACKPACK-BLACK-1.jpg',
+        },
+        {
+            'id': '2',
+            'name': 'Skategoat',
+            'type': 'Blanket',
+            'price': '82$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/SKATEGOAT-BLANKET-BLACK-2.jpg',
+        },
+        {
+           'id': '3',
+            'name': 'Still Watchin',
+            'type': 'Lapel Pin',
+            'price': '10$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/STILLWATCHIN-LAPELPIN-BLACK-1.jpg'
+        },
+        {
+           'id': '4',
+            'name': 'Thrasher',
+            'type': 'Dog Bowl',
+            'price': '14$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/DOGBOWL-BLACK-1.jpg'
+        },
+         {
+           'id': '5',
+            'name': 'Flame',
+            'type': 'Web Belt',
+            'price': '17$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/FLAME-WEBBELT-BLACK-1copy.jpg'
+        },{
+           'id': '6',
+            'name': 'Skategoat',
+            'type': 'Lapel Pin',
+            'price': '10$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/SKATEGOAT-LAPELPIN-2.jpg'
+        },
+        {
+           'id': '7',
+            'name': 'Gonz Thumbs Up',
+            'type': 'Tote Bag',
+            'price': '14$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/GONZTHUMBSUP-TOTEBAG-BLACK-1.jpg'
+        },
+        {
+           'id': '8',
+            'name': 'Thrasher',
+            'type': 'Duffel',
+            'price': '71.87$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/THRASHER-SKATEDUFFELBAG-BLACK-1.jpg'
+        },]
     })
 
 if __name__ == "__main__":

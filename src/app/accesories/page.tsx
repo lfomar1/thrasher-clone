@@ -1,28 +1,23 @@
 "use client";
 import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
 import ProductInfo from "../components/UI/ProductInfo";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import { Product } from "../types/types";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
-interface Apparel {
-  apparel: Product[];
-}
-
-const Apparel = () => {
-  const [apparel, setApparel] = useState<Product[]>([]);
+const Accesories = () => {
+  const [accessories, setAccesories] = useState<Product[]>([]);
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/api/shop")
+    fetch("http://localhost:8080/api/shop")
       .then((res) => res.json())
-      .then((data) => setApparel(data.apparel));
-  });
+      .then((data) => setAccesories(data.accesories));
+  }, []);
   return (
     <>
       <Navbar />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {apparel &&
-          apparel.map((product) => {
+        {accessories &&
+          accessories.map((product) => {
             return (
               <div key={product.id}>
                 <Image
@@ -41,8 +36,7 @@ const Apparel = () => {
             );
           })}
       </div>
-      <Footer />
     </>
   );
 };
-export default Apparel;
+export default Accesories;
