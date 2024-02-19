@@ -1,15 +1,11 @@
 "use client";
 import Image from "next/image";
+import { Product } from "../types/types";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Button from "../components/UI/Button";
 import Footer from "../components/Footer/Footer";
 
-interface Product {
-  id: number;
-  img_src: string;
-  name: string;
-}
 interface NavbarCollection {
   collection: Product[];
 }
@@ -33,7 +29,7 @@ const Collection = () => {
             return (
               <div key={product.id} className="w-full relative">
                 <Image
-                  src={product.img_src}
+                  src={product.img_url}
                   alt="banner"
                   width={0}
                   height={0}
