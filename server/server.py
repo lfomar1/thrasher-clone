@@ -129,7 +129,64 @@ def return_home():
             'type': 'Duffel',
             'price': '71.87$',
             'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/THRASHER-SKATEDUFFELBAG-BLACK-1.jpg'
-        },]
+        },],
+        'magazines': [{
+            'id': '1',
+            'name': 'April 2024',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2024-4-APRIL.jpg'
+        },
+        {
+            'id': '2',
+            'name': 'March 2024',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/TH0324-Cover_cp14-1200.jpg'
+        },
+        {
+            'id': '3',
+            'name': 'February 2024',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2024-2-FEBRUARY.jpg'
+        },
+        {
+            'id': '4',
+            'name': 'January 2024',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/January_2024_Cover_900.jpg'
+        },
+        {
+            'id': '5',
+            'name': 'December 2023',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2023-December-Cover-900.jpg'
+        }, 
+        {
+            'id': '6',
+            'name': 'November 2023',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2023-November-Cover-900.jpg'
+        },
+         {
+            'id': '7',
+            'name': 'October 2023',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2023-October-Cover-900.jpg'
+        },
+         {
+            'id': '8',
+            'name': 'September 2023',
+            'type': 'Thrasher Magazine',
+            'price': '6$',
+            'img_url' : 'https://shop.thrashermagazine.com/cdn/shop/files/2023-September-Cover-900.jpg'
+        },
+        ]
     })
 
 if __name__ == "__main__":

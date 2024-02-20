@@ -29,7 +29,7 @@ const Navbar = () => {
           <ShoppingBag />
         </div>
       </div>
-      <div className="w-full relative mb-4">
+      <div className="w-full relative mb-20">
         <Image
           src="https://shop.thrashermagazine.com/cdn/shop/files/HOMEPAGE-HEADER-1670_X_700-DT_6b774441-95c3-46d2-8364-7bdb3aab8384.jpg"
           alt="banner"
