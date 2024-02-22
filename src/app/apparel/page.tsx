@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 import { useEffect, useState } from "react";
 import { Product } from "../types/types";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
-
+import Filter from "../components/Filter/Filter";
 const Apparel = () => {
   const [apparel, setApparel] = useState<Product[]>([]);
   useEffect(() => {
@@ -12,9 +12,19 @@ const Apparel = () => {
       .then((res) => res.json())
       .then((data) => setApparel(data.apparel));
   });
+  const minPrice = 0;
+
+  const filterPrice = (products: Product[]) => {
+    return products.filter((product) => {
+      product.price !== undefined && product.price >= minPrice;
+    });
+  };
+
+  const newPrice = filterPrice(apparel);
   return (
     <>
       <Navbar />
+      <Filter />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {apparel &&
           apparel.map((product) => {
