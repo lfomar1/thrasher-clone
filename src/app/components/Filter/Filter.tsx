@@ -2,35 +2,14 @@ import { SlidersHorizontal, MoveRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Product } from "@/app/types/types";
 
-const FilterInputs = () => {
-  return (
-    <div className="flex justify-end gap-2 items-center">
-      <input type="text" className="border border-black rounded p-1" size={4} />
-      <p>-</p>
-      <input type="text" className="border border-black rounded p-1" size={4} />
-      <button>
-        <MoveRight />
-      </button>
-    </div>
-  );
-};
 const Filter = () => {
   const [showFilterInputs, setShowFilterInputs] = useState(false);
+  const [minPrice, setMinPrice] = useState(0);
+
   const handleEvent = () => {
     setShowFilterInputs(!showFilterInputs);
   };
-  // const [filters, setFilters] = useState({
-  //   minPrice: 0,
-  // });
-  // const [products] = useState(filteredProducts);
 
-  // const filterProducts = (products) => {
-  //   return products.filter((product) => {
-  //     return product.price >= filters.minPrice;
-  //   });
-  // };
-
-  // const totalProducts = filterProducts(products);
   return (
     <>
       <div className="flex justify-end">
@@ -39,8 +18,29 @@ const Filter = () => {
           <SlidersHorizontal />
         </button>
       </div>
-      {showFilterInputs && <FilterInputs />}
+      {showFilterInputs && (
+        <div className="flex justify-end gap-2 items-center">
+          <input
+            type="number"
+            value={minPrice}
+            onChange={(e) => setMinPrice(Number(e.target.value))}
+            className="border border-black rounded p-1"
+            size={4}
+          />
+          <p>-</p>
+          <input
+            type="number"
+            className="border border-black rounded p-1"
+            size={4}
+          />
+          <button>
+            <MoveRight />
+          </button>
+        </div>
+      )}
+      {console.log(minPrice)}
     </>
   );
 };
+
 export default Filter;
