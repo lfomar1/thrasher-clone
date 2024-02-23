@@ -48,15 +48,9 @@ import Footer from "../components/Footer/Footer";
 import { Product } from "../types/types";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import Filter from "../components/Filter/Filter";
-import {
-  FilterProvider,
-  useFilterContext,
-} from "../components/Filter/FilterContext";
 
 const Apparel = () => {
-  const { minPrice } = useFilterContext();
   const [apparel, setApparel] = useState<Product[]>([]);
-  const [filterApparel, setFilterApparel] = useState<Product[]>([]);
 
   useEffect(() => {
     fetch("http://127.0.0.1:8080/api/shop")
@@ -64,25 +58,17 @@ const Apparel = () => {
       .then((data) => setApparel(data.apparel));
   }, []);
 
-  useEffect(() => {
-    const filteredProducts = apparel.filter((product) => {
-      return product.price !== undefined && product.price >= minPrice;
-    });
-    setFilterApparel(filteredProducts);
-  }, [minPrice, apparel]);
-
   return (
     <>
       <Navbar />
-      <FilterProvider>
-        {/* Pass minPrice as a prop to Filter component if needed */}
-        <Filter />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filterApparel.map((product) => (
-            <ProductDetails product={product} key={product.id} />
-          ))}
-        </div>
-      </FilterProvider>
+
+      <Filter />
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {apparel.map((product) => (
+          <ProductDetails product={product} key={product.id} />
+        ))}
+      </div>
+
       <Footer />
     </>
   );
